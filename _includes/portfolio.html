@@ -1,0 +1,340 @@
+<section id="portfolio"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Top aktuell!</h2>
+                <hr class="primary">
+                <p>Eine Selektion unserer neusten Produkte. Wir haben grosse Freude daran, du hoffentlich auch.</p>
+                <p style="margin-bottom:-1cm;"></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">    
+            <div class="col-lg-12 col-sm-12">
+                <div class="slideshow-container">
+
+                     <div class="mySlides fade">
+                        <img src="img/portfolio/funky_tomato.jpg" style="max-width: 1000px; width: 60%;height: 400px;object-fit: cover;display: block; margin-left: auto; margin-right: auto;">
+                        <div class="text"></div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="img/portfolio/tofu.jpg" style="max-width: 1000px; width: 60%;height: 400px;object-fit: cover;display: block; margin-left: auto; margin-right: auto;">
+                        <div class="text"></div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="img/portfolio/poire.png" style="max-width: 1000px; width: 40%;height: 400px;object-fit: cover;display: block; margin-left: auto; margin-right: auto;">
+                        <div class="text"></div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+                
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+            </div>
+        </div>
+    </div>            
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" actived", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " actived";
+}
+</script>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p style="margin-bottom:2cm;"></p>
+                <h2 class="section-heading">Unser Sortiment</h2>
+                <hr class="primary">
+                <!--<p>Coming soon!</p>-->
+                <p>Hier findest du unser ökologisches und faires Sortiment. Kurzbeschriebe unserer Produzenten und Lieferanten findest du <a style="color:rgb(240, 95, 64);" href="../produzenten.html">hier</a>.</p> 
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="col-lg-3 col-sm-4">
+                <a href="1_getreide.html" class="portfolio-box">
+                    <img src="img/categories/1.jpg" class="img-responsive" alt="" width="768px" height="500px">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                
+                            </div>
+                            <div class="project-name">
+                               Getreide (Körner und Mehl)
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-4">
+                <a href="2_huelsenfruechte_und_soja.html" class="portfolio-box">
+                    <img src="img/categories/2.jpg" class="img-responsive" alt="" width="768px" height="500px">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                
+                            </div>
+                            <div class="project-name">
+                                Hülsenfrüchte/Soja
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-4">
+                <a href="3_pasta.html" class="portfolio-box">
+                    <img src="img/categories/3.jpg" class="img-responsive" alt="" width="768px" height="500px">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                
+                            </div>
+                            <div class="project-name">
+                                Pasta
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-4">
+                <a href="4_nuesse_kerne_samen.html" class="portfolio-box">
+                    <img src="img/categories/4.jpg" class="img-responsive" alt="" width="768px" height="500px">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                
+                            </div>
+                            <div class="project-name">
+                                Nüsse/Kerne/Samen
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-sm-4">
+                <a href="5_getrocknetes.html" class="portfolio-box">
+                    <img src="img/categories/5.jpg" class="img-responsive" alt="" width="768px" height="500px">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                
+                            </div>
+                            <div class="project-name">
+                                Getrocknetes
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-sm-4">
+                <a href="6_zucker_honig_suesses.html" class="portfolio-box">
+                    <img src="img/categories/6.jpg" class="img-responsive" alt="" width="768px" height="500px">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                
+                            </div>
+                            <div class="project-name">
+                                Zucker/Honig/Süsses
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div> 
+            
+            <div class="col-lg-3 col-sm-4">
+                <a href="7_frische_produkte.html" class="portfolio-box">
+                    <img src="img/categories/7.jpg" class="img-responsive" alt="" width="768px" height="500px">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                
+                            </div>
+                            <div class="project-name">
+                                Frische Produkte
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div> 
+            
+            <div class="col-lg-3 col-sm-4">
+                <a href="8_konserven_fertigprodukte.html" class="portfolio-box">
+                    <img src="img/categories/8.jpg" class="img-responsive" alt="" width="768px" height="500px">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                
+                            </div>
+                            <div class="project-name">
+                                Konserven/Fertigprodukte
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div> 
+            
+            <div class="col-lg-3 col-sm-4">
+                <a href="9_oel_und_essig.html" class="portfolio-box">
+                    <img src="img/categories/9.jpg" class="img-responsive" alt="" width="768px" height="500px">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                
+                            </div>
+                            <div class="project-name">
+                                Öl/Essig
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div> 
+            
+            <div class="col-lg-3 col-sm-4">
+                <a href="10_gewuerze_senf.html" class="portfolio-box">
+                    <img src="img/categories/10.jpg" class="img-responsive" alt="" width="768px" height="500px">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                
+                            </div>
+                            <div class="project-name">
+                                Gewürze/Senf
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div> 
+            
+            <div class="col-lg-3 col-sm-4">
+                <a href="11_kaffee_tee.html" class="portfolio-box">
+                    <img src="img/categories/11.jpg" class="img-responsive" alt="" width="768px" height="500px">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                
+                            </div>
+                            <div class="project-name">
+                                Kaffee/Tee
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div> 
+            
+            <div class="col-lg-3 col-sm-4">
+                <a href="12_pflanzenmilch_non_alk_getraenke.html" class="portfolio-box">
+                    <img src="img/categories/12.jpg" class="img-responsive" alt="" width="768px" height="500px">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                
+                            </div>
+                            <div class="project-name">
+                                Pflanzenmilch/n. alk. Getränke
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div> 
+            
+            <div class="col-lg-3 col-sm-4">
+                <a href="13_alk_getraenke.html" class="portfolio-box">
+                    <img src="img/categories/13.jpg" class="img-responsive" alt="" width="768px" height="500px">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                
+                            </div>
+                            <div class="project-name">
+                                Alk. Getränke
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div> 
+            
+            
+            <div class="col-lg-3 col-sm-4">
+                <a href="14_non_food.html" class="portfolio-box">
+                    <img src="img/categories/14.jpg" class="img-responsive" alt="" width="768px" height="500px">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                
+                            </div>
+                            <div class="project-name">
+                                Non-food
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div> 
+            
+       </div>
+    </div> 
+            
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p style="margin-bottom:2cm;"></p>
+                <h2 class="section-heading">Dein Lieblingsprodukt</h2>
+                <hr class="primary">
+                <p>Teile uns dein Lieblingsprodukt mit und wir geben unser Bestes um es bald im Sortiment zu begrüssen.</p>
+                <!-- <p style="margin-bottom:-1cm;"></p> -->
+                <form class="modal-content" style="box-shadow: none;border: 0;" method="POST" action="https://formspree.io/info@foodcoop-zurgertrud.ch">
+                    <div style="margin-left:0.5cm;margin-right:0.5cm;box-shadow: none;border: 0;" class="form-group">
+                        <!-- <label for="exampleTextarea"><h3 class="section-heading">Dein Lieblingsprodukt</h3></label> -->
+                        <textarea class="form-control" id="exampleTextarea" placeholder="" rows="1" name="Gewünschtes Produkt" required></textarea>
+                        <!-- <small id="exampleTextarea" class="form-text text-muted">Teile uns dein Lieblingsprodukt mit und wir geben unser Bestes um es bald im Sortiment zu begrüssen.</small> -->
+                        <p style="margin-bottom:0.5cm;"></p>
+                            <div class="clearfix">
+                                <button type="submit" style="width:auto;" class="btn btn-primary btn-xl page-scroll">Senden</button>
+                            </div>
+                    </div>
+                </form>
+                <p style="margin-bottom:-3.5cm;"></p>
+            </div>
+        </div>
+        </div>    
+</section>
