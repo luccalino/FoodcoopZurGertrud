@@ -9,6 +9,12 @@ setwd("~/Library/Mobile Documents/com~apple~CloudDocs/Projects/foodcoop_zurgertr
 members <- read_delim("members/members_export_b7206ee42e/subscribed_members_export_b7206ee42e.csv", delim = ",", locale = locale(encoding = "UTF-8"))
 unsubsrciped_members <- read_delim("members/members_export_b7206ee42e/unsubscribed_members_export_b7206ee42e.csv", delim = ",", locale = locale(encoding = "UTF-8"))
 
+# Reduce
+members <- members %>%
+  select(`E-Mail Adresse`, OPTIN_TIME, TAGS)
+unsubsrciped_members <- unsubsrciped_members %>%
+  select(`E-Mail Adresse`, UNSUB_TIME, TAGS)
+
 # Date format
 members$OPTIN_TIME <- as.POSIXct(members$OPTIN_TIME, format = "%Y/%m/%d %H:%M:%S")
 members$sub_time <- as.Date(members$OPTIN_TIME)
@@ -25,6 +31,12 @@ members$newsletter <- 0
 members$newsletter[grepl("Newsletter", members$TAGS) == TRUE & 
                      grepl("Mitgliederbeitrag offen", members$TAGS) == FALSE & 
                      grepl("Mitglied", members$TAGS) == FALSE] <- 1
+
+unsubsrciped_members$member <- 0
+unsubsrciped_members$member[grepl("Mitglied", unsubsrciped_members$TAGS) == TRUE & 
+                 grepl("Mitgliederbeitrag offen", unsubsrciped_members$TAGS) == FALSE] <- 1
+unsubsrciped_members$pending_member <- 0
+unsubsrciped_members$newsletter <- 0
 
 # Mitgliederentwicklung
 sub_ts <- members %>%
